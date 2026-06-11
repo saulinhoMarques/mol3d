@@ -1,0 +1,1 @@
+Coloque aqui o arquivo exportado do Blender com o nome: celular.glb

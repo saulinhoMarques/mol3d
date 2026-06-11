@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoPhone 3D | Site Futurista Imersivo</title>
+  <meta name="description" content="Landing page futurista com celular 3D em Three.js, animação no scroll, partículas, efeitos neon e design responsivo.">
+  <meta property="og:title" content="NeoPhone 3D | Site Futurista Imersivo">
+  <meta property="og:description" content="Experiência web futurista com modelo 3D interativo e animações no scroll.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NeoPhone 3D | Site Futurista Imersivo">
+  <meta name="twitter:description" content="Landing page futurista com celular 3D em Three.js.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-box">
+      <div class="loader-logo">SM</div>
+      <p>Carregando experiência 3D...</p>
+      <div class="bar"><span id="barFill"></span></div>
+      <small id="loaderPercent">0%</small>
+    </div>
+  </div>
+
+  <canvas id="webgl"></canvas>
+
+  <header class="header">
+    <a href="#" class="brand"><span class="brand-icon">◇</span><span>NeoPhone</span></a>
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#design">Design</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#contato" class="header-btn">Quero um site</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Experiência Web 3D</span>
+          <h1>Um site futurista com celular 3D feito no Blender.</h1>
+          <p>Uma landing page imersiva com Three.js, partículas, neon, animação no scroll e um modelo 3D criado por você.</p>
+          <div class="hero-actions">
+            <a href="#recursos" class="btn primary">Explorar</a>
+            <a href="#design" class="btn ghost">Ver tecnologia</a>
+          </div>
+          <div class="stats">
+            <div><strong>3D</strong><span>Three.js</span></div>
+            <div><strong>GLB</strong><span>Blender</span></div>
+            <div><strong>100%</strong><span>Responsivo</span></div>
+          </div>
+        </div>
+        <div class="hero-panel reveal">
+          <div class="hud-card">
+            <span>Status do modelo</span>
+            <strong id="modelStatus">Aguardando celular.glb</strong>
+          </div>
+          <div class="scan-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recursos">
+      <div class="container split">
+        <div class="section-text reveal">
+          <span class="eyebrow">Scroll Cinematográfico</span>
+          <h2>O celular gira conforme você desce a tela.</h2>
+          <p>A rolagem controla rotação, posição e profundidade do modelo. Isso cria sensação de site premium, tipo apresentação de produto.</p>
+        </div>
+        <div class="cards">
+          <article class="feature-card reveal"><span>01</span><h3>Modelo GLB</h3><p>Exportado do Blender e carregado direto no navegador.</p></article>
+          <article class="feature-card reveal"><span>02</span><h3>Neon HUD</h3><p>Cards com vidro, bordas brilhantes e estética futurista.</p></article>
+          <article class="feature-card reveal"><span>03</span><h3>Performance</h3><p>Renderização otimizada e fallback se o modelo não carregar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="design">
+      <div class="container design-grid">
+        <div class="tech-box reveal"><div class="orb"></div><h3>Feito para portfólio</h3><p>Esse modelo pode virar uma vitrine para vender sites modernos: loja, estética, barbearia, serviços locais e produtos digitais.</p></div>
+        <div class="section-text reveal"><span class="eyebrow">Design Digital</span><h2>Visual de produto tecnológico, sem complicar demais.</h2><p>O foco é usar HTML, CSS e JavaScript puro. Você troca o arquivo 3D e personaliza os textos.</p></div>
+      </div>
+    </section>
+
+    <section class="section final" id="contato">
+      <div class="container final-content reveal">
+        <span class="eyebrow">Projeto pronto para evoluir</span>
+        <h2>Agora é só colocar seu celular.glb na pasta assets.</h2>
+        <p>Depois disso, abra com Live Server e veja seu objeto 3D girando no site.</p>
+        <a class="btn primary" href="https://wa.me/5511999999999?text=Olá! Quero um site futurista 3D." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><p>© 2026 NeoPhone 3D — Criado por Saulo Marques.</p></footer>
+
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
